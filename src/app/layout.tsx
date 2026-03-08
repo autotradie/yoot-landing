@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import Header from '@/components/Header'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata: Metadata = {
   title: {
@@ -63,6 +64,7 @@ export default function RootLayout({
       <body className="min-h-screen">
         <Header />
         {children}
+        <GoogleAnalytics gaId="G-R746V5WZG2" />
       </body>
     </html>
   )
