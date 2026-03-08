@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-yoot-page text-yoot-navy font-sans antialiased;
+  }
+}
+
+/* Blog post content styles */
+.prose h1 {
+  @apply text-2xl font-bold text-yoot-navy mt-10 mb-4;
+}
+.prose h2 {
+  @apply text-xl font-bold text-yoot-navy mt-8 mb-3;
+}
+.prose h3 {
+  @apply text-lg font-bold text-yoot-navy mt-6 mb-2;
+}
+.prose p {
+  @apply text-base text-yoot-navy leading-relaxed mb-4;
+}
+.prose ul {
+  @apply list-disc pl-6 mb-4 space-y-1;
+}
+.prose ol {
+  @apply list-decimal pl-6 mb-4 space-y-1;
+}
+.prose li {
+  @apply text-base text-yoot-navy leading-relaxed;
+}
+.prose a {
+  @apply text-yoot-amber underline underline-offset-2 hover:text-yoot-navy transition-colors;
+}
+.prose blockquote {
+  @apply border-l-4 border-yoot-amber pl-4 italic text-yoot-slate my-4;
+}
+.prose code {
+  @apply font-mono text-sm bg-yoot-surface px-1.5 py-0.5 rounded;
+}
+.prose pre {
+  @apply bg-yoot-navy text-white p-4 rounded-xl overflow-x-auto mb-4;
+}
+.prose pre code {
+  @apply bg-transparent px-0 py-0;
+}
+.prose img {
+  @apply rounded-xl my-6;
+}
+.prose hr {
+  @apply border-yoot-border my-8;
+}
