@@ -81,12 +81,7 @@ export default async function BlogPost({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <main className="min-h-screen px-6 py-16 max-w-2xl mx-auto">
-        <Link
-          href="/"
-          className="text-sm font-bold text-yoot-navy hover:text-yoot-amber transition-colors"
-        >
-          YOOT
-        </Link>
+        
 
         <article className="mt-8">
           <div className="mb-8">

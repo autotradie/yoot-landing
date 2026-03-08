@@ -20,12 +20,7 @@ export default function BlogIndex() {
 
   return (
     <main className="min-h-screen px-6 py-16 max-w-2xl mx-auto">
-      <Link
-        href="/"
-        className="text-sm font-bold text-yoot-navy hover:text-yoot-amber transition-colors"
-      >
-        YOOT
-      </Link>
+      
 
       <h1 className="text-3xl font-bold text-yoot-navy mt-8 mb-2">Blog</h1>
       <p className="text-base text-yoot-slate mb-10">
