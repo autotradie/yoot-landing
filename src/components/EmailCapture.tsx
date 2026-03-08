@@ -1,63 +1,53 @@
 'use client'
 
-{/* 
-  EMAIL CAPTURE COMPONENT
-  
-  Replace the placeholder form below with your ConvertKit (Kit) form embed.
-  
-  Steps:
-  1. Sign up at kit.com (free up to 1,000 subscribers)
-  2. Create a form with fields: First Name, Email, Trade (dropdown)
-  3. Copy the HTML embed code
-  4. Replace the placeholder <form> below with the Kit embed
-  
-  The Kit embed will handle all form submission, subscriber storage,
-  and lead magnet delivery. No backend code needed.
-*/}
+import Script from 'next/script'
 
 export default function EmailCapture() {
   return (
     <div className="max-w-sm mx-auto">
-      {/* 
-        REPLACE THIS ENTIRE <form> BLOCK WITH YOUR CONVERTKIT EMBED CODE
-        The styling below is a visual placeholder so the page looks complete.
-      */}
-      <form
-        action="#"
-        method="POST"
-        className="space-y-3"
-        onSubmit={(e) => e.preventDefault()}
-      >
-        <input
-          type="text"
-          placeholder="First name"
-          className="w-full px-4 py-3 rounded-xl border border-yoot-border bg-yoot-surface text-yoot-navy placeholder:text-yoot-muted text-sm focus:outline-none focus:border-yoot-amber transition-colors"
-        />
-        <input
-          type="email"
-          placeholder="Email"
-          className="w-full px-4 py-3 rounded-xl border border-yoot-border bg-yoot-surface text-yoot-navy placeholder:text-yoot-muted text-sm focus:outline-none focus:border-yoot-amber transition-colors"
-        />
-        <select
-          className="w-full px-4 py-3 rounded-xl border border-yoot-border bg-yoot-surface text-yoot-navy text-sm focus:outline-none focus:border-yoot-amber transition-colors"
-          defaultValue=""
-        >
-          <option value="" disabled>What trade?</option>
-          <option value="plumber">Plumber</option>
-          <option value="electrician">Electrician</option>
-          <option value="builder">Builder</option>
-          <option value="other">Other tradie</option>
-        </select>
-        <button
-          type="submit"
-          className="w-full px-4 py-3 rounded-xl bg-yoot-amber text-white font-semibold text-sm hover:opacity-90 transition-opacity"
-        >
-          Get early access
-        </button>
-      </form>
+      <div
+        dangerouslySetInnerHTML={{
+          __html: `
+            <form
+              class="ml-block-form"
+              action="https://assets.mailerlite.com/jsonp/2171114/forms/181340284882257729/subscribe"
+              method="post"
+              target="_blank"
+              style="margin:0;"
+            >
+              <div style="display:flex;flex-direction:column;gap:0.75rem;">
+                <input
+                  type="email"
+                  name="fields[email]"
+                  placeholder="Email"
+                  autocomplete="email"
+                  required
+                  style="width:100%;padding:0.75rem 1rem;border-radius:0.75rem;border:1px solid #DDE4E9;background:#F5F8FA;color:#0F2D4A;font-size:0.875rem;font-family:'DM Sans',system-ui,sans-serif;outline:none;"
+                  onfocus="this.style.borderColor='#C47D0E'"
+                  onblur="this.style.borderColor='#DDE4E9'"
+                />
+                <input type="hidden" name="ml-submit" value="1">
+                <input type="hidden" name="anticsrf" value="true">
+                <button
+                  type="submit"
+                  style="width:100%;padding:0.75rem 1rem;border-radius:0.75rem;background:#C47D0E;color:#ffffff;font-weight:600;font-size:0.875rem;font-family:'DM Sans',system-ui,sans-serif;border:none;cursor:pointer;"
+                  onmouseover="this.style.opacity='0.9'"
+                  onmouseout="this.style.opacity='1'"
+                >
+                  Get early access
+                </button>
+              </div>
+            </form>
+          `,
+        }}
+      />
       <p className="mt-3 text-xs text-yoot-muted">
         No spam. Just early access and founder pricing when we launch.
       </p>
+      <Script
+        src="https://groot.mailerlite.com/js/w/webforms.min.js?v95037e5bac78f29ed026832ca21a7c7b"
+        strategy="lazyOnload"
+      />
     </div>
   )
 }
