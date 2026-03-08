@@ -17,6 +17,15 @@ export default function EmailCapture() {
             >
               <div style="display:flex;flex-direction:column;gap:0.75rem;">
                 <input
+                  type="text"
+                  name="fields[name]"
+                  placeholder="First name"
+                  autocomplete="given-name"
+                  style="width:100%;padding:0.75rem 1rem;border-radius:0.75rem;border:1px solid #DDE4E9;background:#F5F8FA;color:#0F2D4A;font-size:0.875rem;font-family:'DM Sans',system-ui,sans-serif;outline:none;"
+                  onfocus="this.style.borderColor='#C47D0E'"
+                  onblur="this.style.borderColor='#DDE4E9'"
+                />
+                <input
                   type="email"
                   name="fields[email]"
                   placeholder="Email"
@@ -26,6 +35,18 @@ export default function EmailCapture() {
                   onfocus="this.style.borderColor='#C47D0E'"
                   onblur="this.style.borderColor='#DDE4E9'"
                 />
+                <select
+                  name="fields[trade]"
+                  style="width:100%;padding:0.75rem 1rem;border-radius:0.75rem;border:1px solid #DDE4E9;background:#F5F8FA;color:#0F2D4A;font-size:0.875rem;font-family:'DM Sans',system-ui,sans-serif;outline:none;appearance:none;-webkit-appearance:none;"
+                  onfocus="this.style.borderColor='#C47D0E'"
+                  onblur="this.style.borderColor='#DDE4E9'"
+                >
+                  <option value="" disabled selected>What trade?</option>
+                  <option value="Plumber">Plumber</option>
+                  <option value="Electrician">Electrician</option>
+                  <option value="Builder">Builder</option>
+                  <option value="Other">Other tradie</option>
+                </select>
                 <input type="hidden" name="ml-submit" value="1">
                 <input type="hidden" name="anticsrf" value="true">
                 <button
