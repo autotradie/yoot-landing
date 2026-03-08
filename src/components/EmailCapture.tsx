@@ -23,7 +23,13 @@ export default function EmailCapture() {
         action="https://assets.mailerlite.com/jsonp/2171114/forms/181340284882257729/subscribe"
         method="post"
         target="ml-hidden-iframe"
-        onSubmit={() => setTimeout(() => setSubmitted(true), 500)}
+        onSubmit={() => setTimeout(() => {
+          setSubmitted(true)
+          window.gtag?.('event', 'generate_lead', {
+            event_category: 'signup',
+            event_label: 'early_access',
+          })
+        }, 500)}
         style={{ margin: 0 }}
       >
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
