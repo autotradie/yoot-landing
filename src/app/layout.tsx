@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   },
   description: 'YOOT helps solo tradies manage jobs, quotes and invoices from their phone. Less admin. More work.',
   metadataBase: new URL('https://yootfirst.app'),
+  verification: {
+    google: 'rRX3Cb3DNyiV_nFTfduTtEmm-pWQDUg1YOMNCv-xVsA',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_AU',
