@@ -3,7 +3,10 @@ title: "How Do Plumbers Keep Track of Jobs?"
 date: "2026-03-08"
 description: "Most plumbers track jobs using memory, notebooks, or their camera roll. Here are the common systems solo plumbers use — and where they break down."
 slug: "how-plumbers-keep-track-of-jobs"
-keywords: "how do plumbers keep track of jobs, plumber job tracking, plumbing job management"
+keywords: 
+- how do plumbers keep track of jobs 
+- plumber job tracking 
+- plumbing job management
 ---
 
 # How Do Plumbers Keep Track of Jobs?
